@@ -6,6 +6,7 @@ export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
   const { deleteTransaction } = useContext(GlobalContext);
 
+  // Using a ternary, update the sign for each transaction
   return (
     <li className={transaction.amount < 0 ? "minus" : "plus"}>
       {transaction.text}{" "}

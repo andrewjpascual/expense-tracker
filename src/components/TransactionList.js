@@ -5,6 +5,7 @@ import { Transaction } from "./Transaction";
 export const TransactionList = () => {
   const { transactions } = useContext(GlobalContext);
 
+  // Based on transaction id, display transaction history
   return (
     <>
       <h3>History</h3>

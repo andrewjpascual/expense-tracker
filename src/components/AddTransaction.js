@@ -19,6 +19,10 @@ export const AddTransaction = () => {
     };
 
     addTransaction(newTransaction);
+
+    // Reset the form
+    setText("");
+    setAmount(0);
   };
 
   return (
@@ -35,7 +39,7 @@ export const AddTransaction = () => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="amount">Amount</label>
+          <label htmlFor="amount">Amount ($)</label>
           <input
             type="number"
             value={amount}
