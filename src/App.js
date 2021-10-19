@@ -7,6 +7,7 @@ import { Balance } from "./components/Balance";
 import { IncomeExpenses } from "./components/IncomeExpenses";
 import { TransactionList } from "./components/TransactionList";
 import { AddTransaction } from "./components/AddTransaction";
+import DoughnutChart from "./components/DoughnutChart";
 
 // Import Provider from context
 import { GlobalProvider } from "./context/GlobalState";
@@ -20,6 +21,7 @@ function App() {
         <IncomeExpenses />
         <TransactionList />
         <AddTransaction />
+        <DoughnutChart />
       </div>
     </GlobalProvider>
   );
