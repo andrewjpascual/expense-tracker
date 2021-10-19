@@ -64,6 +64,7 @@ export const AddTransaction = () => {
             <option value="entertainment">Entertainment</option>
             <option value="travel">Travel</option>
             <option value="pets">Pets</option>
+            <option value="lifestyle">Lifestyle</option>
           </select>
         </div>
         <button className="btn">Add transaction</button>

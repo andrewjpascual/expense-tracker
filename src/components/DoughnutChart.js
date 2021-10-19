@@ -111,6 +111,17 @@ const DoughnutChart = () => {
     0
   );
 
+  // All pets payments and total amount
+  let lifestyleM = transactions;
+  lifestyleM = transactions.filter(
+    (transaction) => transaction.category === "lifestyle"
+  );
+
+  const lifestyleTotal = lifestyleM.reduce(
+    (totalAmount, lifestyle) => totalAmount + lifestyle.amount,
+    0
+  );
+
   console.log(transactions);
 
   console.log(categories);
@@ -126,6 +137,7 @@ const DoughnutChart = () => {
       "Entertainment",
       "Travel",
       "Pets",
+      "Lifestyle",
     ],
     datasets: [
       {
@@ -140,6 +152,7 @@ const DoughnutChart = () => {
           entertainmentTotal,
           travelTotal,
           petsTotal,
+          lifestyleTotal,
         ],
         backgroundColor: [
           "rgba(255, 51, 0, 0.8)",
@@ -151,6 +164,7 @@ const DoughnutChart = () => {
           "rgba(51, 204, 51, 0.3)",
           "rgba(153, 102, 255, 0.4)",
           "rgba(255, 102, 0, 0.4)",
+          "rgba(0, 153, 153,0.4)",
         ],
         borderColor: [
           "rgba(255, 99, 132, 1)",
@@ -162,6 +176,7 @@ const DoughnutChart = () => {
           "rgba(51, 204, 51, 1)",
           "rgba(153, 102, 255, 1)",
           "rgba(255, 102, 0, 1)",
+          "rgba(0, 153, 153,1)",
         ],
         borderWidth: 1,
       },
