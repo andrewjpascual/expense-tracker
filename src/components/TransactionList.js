@@ -7,13 +7,13 @@ export const TransactionList = () => {
 
   // Based on transaction id, display transaction history
   return (
-    <>
+    <div className="tran-con">
       <h3>History</h3>
       <ul className="list">
         {transactions.map((transaction) => (
           <Transaction key={transaction.id} transaction={transaction} />
         ))}
       </ul>
-    </>
+    </div>
   );
 };

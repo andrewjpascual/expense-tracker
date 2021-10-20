@@ -17,11 +17,19 @@ function App() {
     <GlobalProvider>
       <Header />
       <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
-        <DoughnutChart />
+        <div className="con-row">
+          <div className="con-col">
+            <DoughnutChart />
+            <IncomeExpenses />
+          </div>
+          <div className="con-col">
+            <AddTransaction />
+            <Balance />
+          </div>
+          <div className="con-col">
+            <TransactionList />
+          </div>
+        </div>
       </div>
     </GlobalProvider>
   );

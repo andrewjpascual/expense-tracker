@@ -28,11 +28,11 @@ export const AddTransaction = () => {
   };
 
   return (
-    <>
-      <h3>Add new transaction</h3>
+    <div className="addtran-con">
+      <h3>New Transaction</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Type</label>
+          <label htmlFor="text">Details of Transaction</label>
           <input
             type="text"
             value={text}
@@ -69,6 +69,6 @@ export const AddTransaction = () => {
         </div>
         <button className="btn">Add transaction</button>
       </form>
-    </>
+    </div>
   );
 };

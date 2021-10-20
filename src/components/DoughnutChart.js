@@ -178,17 +178,22 @@ const DoughnutChart = () => {
           "rgba(255, 255, 255, 1)", //Pets
           "rgba(255, 255, 255,1)", //Lifestyle
         ],
-        borderWidth: 1,
+        borderWidth: 2,
+        hoverOffset: 4,
+        borderRadius: 5,
       },
     ],
   };
   return (
-    <>
-      <div className="header">
-        <h1 className="title">Asset Allocations</h1>
+    <div class="chart-con">
+      <div className="donut">
+        <div className="header">
+          <h1 className="title-asset">Asset Allocations</h1>
+        </div>
+
+        <Doughnut data={data} />
       </div>
-      <Doughnut data={data} />
-    </>
+    </div>
   );
 };
 
