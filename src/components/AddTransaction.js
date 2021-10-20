@@ -12,19 +12,24 @@ export const AddTransaction = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    // Not the best way, but okay to do this for now
-    const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
-      text,
-      amount: +amount,
-      category,
-    };
+    // Alert if user tries to input 0 amount or no details
+    if (amount == 0 || text == "") {
+      alert("Please enter valid details and amount");
+    } else {
+      // Not the best way, but okay to do this for now
+      const newTransaction = {
+        id: Math.floor(Math.random() * 100000000),
+        text,
+        amount: +amount,
+        category,
+      };
 
-    addTransaction(newTransaction);
+      addTransaction(newTransaction);
 
-    // Reset the form
-    setText("");
-    setAmount(0);
+      // Reset the form
+      setText("");
+      setAmount(0);
+    }
   };
 
   return (

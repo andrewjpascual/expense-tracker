@@ -6,16 +6,6 @@ import { GlobalContext } from "../context/GlobalState";
 const DoughnutChart = () => {
   const { transactions } = useContext(GlobalContext);
 
-  //set of unique categories
-  const categorySet = new Set(
-    transactions.map((transaction) => transaction.category)
-  );
-
-  // Sort the set
-  const categories = Array.from(categorySet).sort();
-
-  // Now make an array for each category
-
   // All food payments and total amount
   let foodM = transactions;
   foodM = transactions.filter((transaction) => transaction.category === "food");
@@ -122,10 +112,14 @@ const DoughnutChart = () => {
     0
   );
 
+  //counter inside chart
+  const counter = {
+    id: "counter",
+  };
+
   console.log(transactions);
 
-  console.log(categories);
-
+  // This is data for the donut
   const data = {
     labels: [
       "Food",
@@ -184,6 +178,13 @@ const DoughnutChart = () => {
       },
     ],
   };
+
+  // Options for the chart
+  const options = {
+    responsive: true,
+    // maintainAspectRatio: true,
+  };
+
   return (
     <div class="chart-con">
       <div className="donut">
@@ -191,7 +192,7 @@ const DoughnutChart = () => {
           <h1 className="title-asset">Asset Allocations</h1>
         </div>
 
-        <Doughnut data={data} />
+        <Doughnut data={data} options={options} />
       </div>
     </div>
   );
