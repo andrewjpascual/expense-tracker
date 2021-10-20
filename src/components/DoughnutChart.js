@@ -167,16 +167,16 @@ const DoughnutChart = () => {
           "rgba(255, 102, 102,0.7)", //Lifestyle
         ],
         borderColor: [
-          "rgba(255, 51, 0, 1)", //Food
-          "rgba(54, 162, 235, 1)", //Home
-          "rgba(255, 204, 0, 1)", //Bills
-          "rgba(255, 153, 0, 1)", //Groceries
-          "rgba(77, 77, 255, 1)", // Tech
-          "rgba(255, 102, 255, 1)", //Health
-          "rgba(0, 102, 0, 1)", //Entertainment
-          "rgba(102, 255, 51, 1)", //Travel
-          "rgba(102, 0, 204, 1)", //Pets
-          "rgba(255, 102, 102,1)", //Lifestyle
+          "rgba(255, 255, 255 ,1)", //Food
+          "rgba(255, 255, 255 ,1)", //Home
+          "rgba(255, 255, 255 ,1)", //Bills
+          "rgba(255, 255, 255 ,1)", //Groceries
+          "rgba(255, 255, 255 ,1)", // Tech
+          "rgba(255, 255, 255 ,1)", //Health
+          "rgba(255, 255, 255 ,1)", //Entertainment
+          "rgba(255, 255, 255 ,1)", //Travel
+          "rgba(255, 255, 255, 1)", //Pets
+          "rgba(255, 255, 255,1)", //Lifestyle
         ],
         borderWidth: 1,
       },
