@@ -51,6 +51,17 @@ h4 {
   text-transform: uppercase;
 }
 
+.top-wrap {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.text-end h2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
 .inc-exp-container {
   border-radius: 5px;
   background-color: #fff;
@@ -257,8 +268,66 @@ select {
   margin-left: 20px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 960px) {
+  h2 {
+    text-align: center;
+  }
+
+  .top-wrap {
+    justify-content: center;
+  }
   .container {
+    width: 350px;
+    height: 1525px;
+    box-shadow: none;
+  }
+
+  .delete-btn {
+    opacity: 1;
+  }
+
+  .con-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chart-con {
+    display: none !important;
+  }
+
+  .inc-con {
     width: 300px;
+    height: 100px;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .inc-exp-container {
+    width: 300px;
+    margin: 0;
+  }
+
+  .addtran-con {
+    order: 2;
+    width: 300px;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .balance-con {
+    width: 300px;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .con-col .tran-con {
+    width: 300px;
+    margin-left: 25px;
   }
 }

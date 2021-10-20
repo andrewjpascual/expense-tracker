@@ -182,7 +182,7 @@ const DoughnutChart = () => {
   // Options for the chart
   const options = {
     responsive: true,
-    // maintainAspectRatio: true,
+    maintainAspectRatio: true,
   };
 
   return (
