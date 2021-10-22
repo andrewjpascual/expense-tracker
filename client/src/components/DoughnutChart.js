@@ -18,13 +18,11 @@ const DoughnutChart = () => {
   // All home payments and total amount
   let homeM = transactions;
   homeM = transactions.filter((transaction) => transaction.category === "home");
-  console.log(homeM);
 
   const homeTotal = homeM.reduce(
     (totalAmount, home) => totalAmount + home.amount,
     0
   );
-  console.log(homeTotal);
 
   // All bill payments and total amount
   let billM = transactions;
@@ -112,11 +110,6 @@ const DoughnutChart = () => {
     0
   );
 
-  //counter inside chart
-  const counter = {
-    id: "counter",
-  };
-
   console.log(transactions);
 
   // This is data for the donut
@@ -149,9 +142,9 @@ const DoughnutChart = () => {
           lifestyleTotal,
         ],
         backgroundColor: [
-          "rgba(255, 220, 30 ,0.7)", //Food
+          "rgba(255, 51, 0, 0.7)", //Food
           "rgba(54, 162, 235, 0.7)", //Home
-          "rgba(255, 51, 0, 0.7)", //Bills
+          "rgba(255, 204, 0, 0.7)", //Bills
           "rgba(255, 153, 0, 0.7)", //Groceries
           "rgba(77, 77, 255, 0.7)", // Tech
           "rgba(255, 102, 255, 0.7)", //Health

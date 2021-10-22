@@ -8,11 +8,11 @@ const TransactionSchema = new mongoose.Schema({
   },
   amount: {
     type: Number,
-    required: [true, "Please add a positive or negative number"],
+    required: [true, "Please enter a positive or negative number"],
   },
   category: {
     type: String,
-    required: [true, "Please add a category"],
+    required: [true, "Please use a category"],
   },
   createdAt: {
     type: Date,

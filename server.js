@@ -1,33 +1,40 @@
-const express = require("express"); // allows us to create a simple server
-const dotenv = require("dotenv"); // allows us to create global variables
-const colors = require("colors"); // allows us to have colors in the console
-const morgan = require("morgan"); // morgan lets us see what routes are hit
+const path = require("path");
+const express = require("express");
+const dotenv = require("dotenv");
+const colors = require("colors");
+const morgan = require("morgan");
 const connectDB = require("./config/db");
 
-// this is to access the config.env
 dotenv.config({ path: "./config/config.env" });
 
-// call the function
 connectDB();
 
-// bring the file in and mount the router
 const transactions = require("./routes/transactions");
 
 const app = express();
 
-// Allows us to use the body parser
 app.use(express.json());
 
-// use the transactions route
+if (process.env.NODE_ENV === "development") {
+    app.use(morgan("dev"));
+}
+
 app.use("/api/v1/transactions", transactions);
 
-// accessing the global port variable
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+
+    app.get("*", (req, res) =>
+        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+    );
+}
+
 const PORT = process.env.PORT || 5000;
 
-// put the port in a config file, then use dotenv to get variable to listen through the port
 app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  )
+    PORT,
+    console.log(
+        `[express] Server running in ${process.env.NODE_ENV} mode on port ${PORT}`
+            .magenta.bold
+    )
 );
