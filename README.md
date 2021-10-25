@@ -54,7 +54,7 @@ There were a few challenges during the creation of this project. First, it was t
 
 ## Inspiration
 
-I wanted to learn more about the MERN stack and so I built an application for it. Huge inspiration by Brad Traversy and Llama Dev for the idea and how to deploy to Heroku. With this project I also learned about chartJS. I aim to possibly build more charts / visuals for different pages in the future. Additionally I learned about MongoDB and mongoose and how to deploy a MERN stack to Heroku.
+I wanted to learn more about the MERN stack and so I built an application for it. Huge inspiration by Brad Traversy and Llama Dev for the idea and how to deploy to Heroku. With this project I also learned about chartJS. Again, this project was a great opportunity to learn about MongoDB, mongoose, deploying to Heroku through git, and using ChartJS.
 
 ## To-Do
 
