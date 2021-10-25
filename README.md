@@ -13,8 +13,8 @@ Link: https://apexpenses.herokuapp.com
 -  [Technologies](#technologies)
 -  [Features](#features)
 -  [Challenges](#challenges)
--  [Inspiration and Ideas Learned](#inspiration)
--  [To-Do](#to-do)
+-  [Inspiration and Ideas Learned](#inspiration and learned concepts)
+-  [To-Do](#future to-do)
 
 ## About
 
