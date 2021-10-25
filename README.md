@@ -3,7 +3,7 @@
 
 My MERN stack expense tracker that supports CRUD capabilities with mobile and web responsiveness.
 
-> Note : This is hosted through a free heroku account so the application may take some time to load.
+> Note : This is hosted through a free heroku account so the application may take some time to load. 
 
 Link: https://apexpenses.herokuapp.com
 
