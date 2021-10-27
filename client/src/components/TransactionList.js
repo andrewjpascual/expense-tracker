@@ -15,9 +15,12 @@ export const TransactionList = () => {
     <div className="tran-con">
       <h3>History</h3>
       <ul className="list">
-        {transactions.map((transaction) => (
-          <Transaction key={transaction._id} transaction={transaction} />
-        ))}
+        {transactions
+          .slice(0)
+          .reverse()
+          .map((transaction) => (
+            <Transaction key={transaction._id} transaction={transaction} />
+          ))}
       </ul>
     </div>
   );
