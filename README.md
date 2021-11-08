@@ -39,7 +39,7 @@ Project is created with:
   - Alert for any invalid transaction (Doesn't include details / amount)
 
 - Interactive Visual Chart :
-  - User can see where the majority of 
+  - User can see where the majority of their transactions are going
   - You can click a category to remove it from the chart
   - When adding / deleting a transaction, the chart will update automatically
 
